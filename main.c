@@ -5,38 +5,24 @@
 
 int main(int argc, char *argv[]) {
 	
-	int a;
-	int b;
-	char c;
-	int result;
+	int ans = 32;
+	int num;
+	int trial =0;
 	
-	printf("enter the caculation:");
-	
-	scanf("%d %c %d",&a,&c,&b);
-	
-	if (c == '+')
-	{
-		result = a + b ;
+	do
+	{	
+		printf("Guess a number:");
+		scanf("%i",&num);
+		
+		if(ans<num)
+			printf("High!\n");
+		else if(ans>num)
+			printf("Low!\n");
+
+		trial = trial + 1 ;
 	}
-	
-	else if (c == '-')
-	{
-		result = a - b ;
-	}
-	else if (c == '/')
-	{
-		result = a / b ;
-	}
-	else if (c == '*')
-	{
-		result = a * b ;
-	}
-	else
-	 {
-	 printf("error");
-	 }
-	
-	printf("result is %i\n",result);
-	
+	while (ans!=num);
+	printf("Congratulation!  trials: %i \n", trial);
+
 	return 0;
 }
