@@ -5,17 +5,15 @@
 
 int main(int argc, char *argv[]) {
 	
-	int input ;
+	int input;
 	
-	printf("input a integer:");
+	printf("input an integer\n");
 	scanf("%d",&input);
 	
-	if (input > 0)
-		printf("positive\n");
-	else if (input<0)
-		printf("negative\n");
-	else
-		printf("zero\n");
+	if(input<0)
+		input = -input ;
+	
+	printf("absolute value is %i\n",input);
 	
 	return 0;
 }
