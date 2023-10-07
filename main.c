@@ -5,19 +5,38 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum =0;
-	int num =0;
-	int i;
+	int a;
+	int b;
+	char c;
+	int result;
 	
-	printf("input a number:");
-	scanf("%d",&num);
+	printf("enter the caculation:");
 	
-	for ( i=0; i<=num; i++)
+	scanf("%d %c %d",&a,&c,&b);
+	
+	if (c == '+')
 	{
-		sum = sum + i ;
+		result = a + b ;
 	}
 	
-	printf("result is %i\n",sum);
+	else if (c == '-')
+	{
+		result = a - b ;
+	}
+	else if (c == '/')
+	{
+		result = a / b ;
+	}
+	else if (c == '*')
+	{
+		result = a * b ;
+	}
+	else
+	 {
+	 printf("error");
+	 }
+	
+	printf("result is %i\n",result);
 	
 	return 0;
 }
